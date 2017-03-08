@@ -6,11 +6,11 @@
             SentryAppender)))
 
 (defmethod unilog/build-appender :sentry
-  [{:keys [min-level dsn tags extra-tags environment server-name release]
+  [{:keys [threshold dsn tags extra-tags environment server-name release]
+    :or {threshold :warn}
     :as config}]
   (let [appender (SentryAppender.)]
-    (when min-level
-      (.setMinLevel appender min-level))
+    (.setMinLevel appender (name threshold))
     (when dsn
       (.setDsn appender dsn))
     (when environment

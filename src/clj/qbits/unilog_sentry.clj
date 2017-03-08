@@ -2,17 +2,15 @@
   (:require
    [clojure.string :as str]
    [unilog.config  :as unilog])
-  (:import (com.getsentry.raven.log4j
+  (:import (com.getsentry.raven.logback
             SentryAppender)))
 
 (defmethod unilog/build-appender :sentry
-  [{:keys [threshold dsn tags extra-tags environment server-name pattern
-           release]
+  [{:keys [min-level dsn tags extra-tags environment server-name release]
     :as config}]
   (let [appender (SentryAppender.)]
-    (when threshold
-      (.setThreshold appender
-                     (get unilog/levels threshold)))
+    (when min-level
+      (.setMinLevel appender min-level))
     (when dsn
       (.setDsn appender dsn))
     (when environment

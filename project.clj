@@ -5,6 +5,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0-alpha14"]
                  [spootnik/unilog "0.7.20"]
-                 [com.getsentry.raven/raven-logback "7.8.3"]]
+                 [io.sentry/sentry-logback "1.5.2"]]
   :source-paths ["src/clj"]
   :global-vars {*warn-on-reflection* true})

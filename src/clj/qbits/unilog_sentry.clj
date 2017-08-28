@@ -2,8 +2,7 @@
   (:require
    [clojure.string :as str]
    [unilog.config  :as unilog])
-  (:import (com.getsentry.raven.logback
-            SentryAppender)))
+  (:import (io.sentry.logback SentryAppender)))
 
 (defmethod unilog/build-appender :sentry
   [{:keys [threshold dsn tags extra-tags environment server-name release]

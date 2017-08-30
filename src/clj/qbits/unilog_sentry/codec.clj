@@ -1,4 +1,4 @@
-(ns qbits.util.codec
+(ns qbits.unilog-sentry.codec
   (:require [ring.util.codec :refer [url-encode]])
   (:import (java.net URLEncoder)))
 

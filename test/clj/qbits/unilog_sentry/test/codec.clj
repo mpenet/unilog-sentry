@@ -1,6 +1,6 @@
-(ns qbits.util.test.codec
+(ns qbits.unilog-sentry.test.codec
   (:use clojure.test
-        qbits.util.codec))
+        qbits.unilog-sentry.codec))
 
 (deftest test-build-url
   (is (= (build-url "https://public:private@host:port/1" {:sample.rate 0.75})

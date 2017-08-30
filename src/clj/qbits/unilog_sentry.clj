@@ -2,7 +2,7 @@
   (:require
    [clojure.string :as str]
    [unilog.config  :as unilog]
-   [qbits.util.codec :as codec]
+   [qbits.unilog-sentry.codec :as codec]
    [sentry-clj.core :as sentry])
   (:import (io.sentry.logback SentryAppender)))
 

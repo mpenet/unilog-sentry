@@ -8,4 +8,6 @@
                  [io.sentry/sentry-clj "0.5.0"]
                  [io.sentry/sentry-logback "1.5.2"]
                  [ring/ring-codec "1.0.1"]]
+  :source-paths ["src/clj"]
+  :test-paths ["test/clj"]
   :global-vars {*warn-on-reflection* true})

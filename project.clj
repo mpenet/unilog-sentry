@@ -1,4 +1,4 @@
-(defproject cc.qbits/unilog-sentry "0.2.2"
+(defproject cc.qbits/unilog-sentry "0.2.3-SNAPSHOT"
   :description ""
   :url "https://github.com/mpenet/unilog-sentry"
   :license {:name "Eclipse Public License"
